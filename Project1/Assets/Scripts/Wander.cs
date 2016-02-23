@@ -8,7 +8,7 @@ public class Wander : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        direction = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0.0f);
+        direction = new Vector3(Random.Range(-1.0f, 1.0f), 0.0f, Random.Range(-1.0f, 1.0f));
         direction.Normalize();
 	}
 	
@@ -20,9 +20,9 @@ public class Wander : MonoBehaviour {
         if (!s || !s.seeking && !f || !f.fleeing)
         {
             direction.x += Random.Range(-0.3f, 0.3f);
-            direction.y += Random.Range(-0.3f, 0.3f);
+            direction.z += Random.Range(-0.3f, 0.3f);
             direction.Normalize();
-            transform.Translate(direction * 0.02f);
+            transform.Translate(direction * wanderSpeed / 10);
         }
 	}
 }

@@ -12,6 +12,7 @@ GameObject:
   - 65: {fileID: 6543902}
   - 23: {fileID: 2311408}
   - 114: {fileID: 11414664}
+  - 114: {fileID: 11438812}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Mouse
@@ -89,8 +90,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toFlee: Cat
   fleeRadius: 75
-  fleeSpeed: 30
+  fleeSpeed: 5
   fleeing: 0
+--- !u!114 &11438812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceae4f679e15b2c49ad73019341fecda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wanderSpeed: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -112,7 +125,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: fleeSpeed
-      value: 30
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: wanderSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

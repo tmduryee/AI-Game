@@ -29,7 +29,7 @@ public class Seek : MonoBehaviour {
 
             if (direction.magnitude < seekRadius)
             {
-                transform.Translate(direction.normalized * seekSpeed / direction.magnitude / 10);
+                transform.Translate(direction.normalized * seekSpeed / 10);
                 seeking = true;
             }
         }

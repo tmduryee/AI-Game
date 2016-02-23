@@ -32,7 +32,7 @@ public class Flee : MonoBehaviour {
 
             if (direction.magnitude < fleeRadius)
             {
-                transform.Translate(direction.normalized * fleeSpeed / direction.magnitude / 10);
+                transform.Translate(direction.normalized * fleeSpeed / 10);
                 fleeing = true;
             }
         }
