@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 469006}
   - 33: {fileID: 3382334}
   - 23: {fileID: 2397146}
-  - 114: {fileID: 11496684}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Dog
@@ -72,21 +71,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146296}
   m_Mesh: {fileID: 4300000, guid: cdbb0aff8ed7cd945a0e52c2db867565, type: 3}
---- !u!114 &11496684
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 146296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff7dcaf77a02a7b4487017d763c92ff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toSeek: Cat
-  seekRadius: 100
-  seekSpeed: 5
-  seeking: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

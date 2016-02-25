@@ -63,13 +63,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Arrive.cs" />
+    <Compile Include="Assets\Scripts\AI\Arrive.cs" />
+    <Compile Include="Assets\Scripts\AI\Flee.cs" />
+    <Compile Include="Assets\Scripts\AI\Seek.cs" />
+    <Compile Include="Assets\Scripts\AI\Wander.cs" />
     <Compile Include="Assets\Scripts\Cat.cs" />
-    <Compile Include="Assets\Scripts\Flee.cs" />
+    <Compile Include="Assets\Scripts\Dog.cs" />
+    <Compile Include="Assets\Scripts\Mouse.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SceneSwitch.cs" />
-    <Compile Include="Assets\Scripts\Seek.cs" />
-    <Compile Include="Assets\Scripts\Wander.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\sky5X\README.txt" />
