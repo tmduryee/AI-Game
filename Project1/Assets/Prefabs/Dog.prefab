@@ -1,54 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &146296
+--- !u!1 &112082
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 469006}
-  - 33: {fileID: 3382334}
-  - 23: {fileID: 2397146}
+  - 4: {fileID: 450044}
+  - 33: {fileID: 3392010}
+  - 23: {fileID: 2392458}
   m_Layer: 0
   m_Name: Dog
-  m_TagString: Dog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &469006
+--- !u!4 &450044
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 146296}
-  m_LocalRotation: {x: 0, y: 0.45448798, z: 0, w: 0.8907529}
-  m_LocalPosition: {x: -14.718527, y: 0, z: -12.314454}
-  m_LocalScale: {x: 0.30721122, y: 0.30721128, z: 0.30721128}
+  m_GameObject: {fileID: 112082}
+  m_LocalRotation: {x: -.498450309, y: .505659103, z: .492984295, w: .50281477}
+  m_LocalPosition: {x: 112.68, y: 0, z: .821139991}
+  m_LocalScale: {x: 7.83343983, y: 6.54876232, z: 22.163538}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2397146
+--- !u!23 &2392458
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 146296}
+  m_GameObject: {fileID: 112082}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: a9c77e0d0ff75794184f3b13b9c82eb0, type: 2}
-  - {fileID: 2100000, guid: 0326a31109a5d34448d9e84e6f6d3f06, type: 2}
-  - {fileID: 2100000, guid: 5bbe472e07b495543a26dfe5a79c8fa2, type: 2}
-  - {fileID: 2100000, guid: f8a1cd81ae0a75c49a16f727271f07b7, type: 2}
-  - {fileID: 2100000, guid: 726f06815a6a49d428a2338b33ec0449, type: 2}
-  - {fileID: 2100000, guid: 14ce79eef4f48594d8750c17a16c97fd, type: 2}
-  - {fileID: 2100000, guid: 0a9f682a16ab7ff43b599aeb71421783, type: 2}
-  - {fileID: 2100000, guid: 79b39269fef053a40b435ab94c3c66f6, type: 2}
-  - {fileID: 2100000, guid: 5f93022d8255ae042ba9de188516c09c, type: 2}
-  - {fileID: 2100000, guid: 268515937c43ee447bf0d70d90d286e9, type: 2}
+  - {fileID: 2100000, guid: e54679743e8954145976a9bff2e73d06, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -59,42 +50,26 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3382334
+--- !u!33 &3392010
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 146296}
-  m_Mesh: {fileID: 4300000, guid: cdbb0aff8ed7cd945a0e52c2db867565, type: 3}
+  m_GameObject: {fileID: 112082}
+  m_Mesh: {fileID: 4300000, guid: 4cb8f3220445bf644b606913cacd4b89, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_TagString
-      value: Dog
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: toSeek
-      value: Cat
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: seekRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: seekSpeed
-      value: 5
-      objectReference: {fileID: 0}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 146296}
+  m_RootGameObject: {fileID: 112082}
   m_IsPrefabParent: 1
