@@ -1,0 +1,275 @@
+fileFormatVersion: 2
+guid: fb8105e7246cc3c4bad4723cff9abcc9
+timeCreated: 1456859483
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: 24 Ligne Roset Citta armchair
+    100002: 24 Ligne Roset Citta armchair1
+    100004: 24 Ligne Roset Citta armchair1_MeshPart0
+    100006: 24 Ligne Roset Citta armchair1_MeshPart1
+    100008: 24 Ligne Roset Citta sofa
+    100010: group10
+    100012: group3
+    100014: group5
+    100016: group6
+    100018: group7
+    100020: group8
+    100022: group9
+    100024: //RootNode
+    100026: pasted__group
+    100028: pasted__group 1
+    100030: pasted__group 2
+    100032: pasted__group4
+    100034: pasted__group4 1
+    100036: pasted__group4 2
+    100038: pasted__group9
+    100040: pasted__pasted__counter
+    100042: pasted__pasted__counter 1
+    100044: pasted__pasted__counter 2
+    100046: pasted__pasted__kitchen
+    100048: pasted__pasted__kitchen 1
+    100050: pasted__pasted__kitchen 2
+    100052: pasted__pasted__pCube14
+    100054: pasted__pasted__pCube14 1
+    100056: pasted__pasted__pCube14 2
+    100058: pasted__pasted__pCube14 3
+    100060: pasted__pasted__pCube15
+    100062: pasted__pasted__pCube15 1
+    100064: pasted__pasted__pCube15 2
+    100066: pasted__pasted__wall_counter
+    100068: pasted__pasted__wall_counter 1
+    100070: pasted__pasted__wall_counter 2
+    100072: pasted__pCube12
+    100074: pasted__pCube14
+    100076: pasted__pCube14 1
+    100078: pCube10
+    100080: pCube11
+    100082: pCube12
+    100084: pCube13
+    100086: pCube14
+    100088: pCube2
+    100090: pCube3
+    100092: pCube9
+    100094: pCylinder1
+    100096: pCylinder2
+    100098: pCylinder3
+    100100: pCylinder4
+    100102: pCylinder5
+    100104: pCylinder6
+    100106: pCylinder7
+    100108: pCylinder8
+    100110: polySurface1
+    100112: polySurface1 1
+    100114: polySurface2
+    100116: polySurface3
+    100118: pPlane1
+    100120: pPlane2
+    100122: transform1
+    100124: transform10
+    100126: transform11
+    100128: transform12
+    100130: transform13
+    100132: transform14
+    100134: transform15
+    100136: transform16
+    100138: transform17
+    100140: transform18
+    100142: transform19
+    100144: transform2
+    100146: transform20
+    100148: transform21
+    100150: transform22
+    100152: transform23
+    100154: transform24
+    100156: transform25
+    100158: transform26
+    100160: transform27
+    100162: transform28
+    100164: transform29
+    100166: transform3
+    100168: transform30
+    100170: transform31
+    100172: transform32
+    100174: transform33
+    100176: transform34
+    100178: transform35
+    100180: transform36
+    100182: transform37
+    100184: transform4
+    100186: transform5
+    100188: transform6
+    100190: transform7
+    100192: transform8
+    100194: transform9
+    400000: 24 Ligne Roset Citta armchair
+    400002: 24 Ligne Roset Citta armchair1
+    400004: 24 Ligne Roset Citta armchair1_MeshPart0
+    400006: 24 Ligne Roset Citta armchair1_MeshPart1
+    400008: 24 Ligne Roset Citta sofa
+    400010: group10
+    400012: group3
+    400014: group5
+    400016: group6
+    400018: group7
+    400020: group8
+    400022: group9
+    400024: //RootNode
+    400026: pasted__group
+    400028: pasted__group 1
+    400030: pasted__group 2
+    400032: pasted__group4
+    400034: pasted__group4 1
+    400036: pasted__group4 2
+    400038: pasted__group9
+    400040: pasted__pasted__counter
+    400042: pasted__pasted__counter 1
+    400044: pasted__pasted__counter 2
+    400046: pasted__pasted__kitchen
+    400048: pasted__pasted__kitchen 1
+    400050: pasted__pasted__kitchen 2
+    400052: pasted__pasted__pCube14
+    400054: pasted__pasted__pCube14 1
+    400056: pasted__pasted__pCube14 2
+    400058: pasted__pasted__pCube14 3
+    400060: pasted__pasted__pCube15
+    400062: pasted__pasted__pCube15 1
+    400064: pasted__pasted__pCube15 2
+    400066: pasted__pasted__wall_counter
+    400068: pasted__pasted__wall_counter 1
+    400070: pasted__pasted__wall_counter 2
+    400072: pasted__pCube12
+    400074: pasted__pCube14
+    400076: pasted__pCube14 1
+    400078: pCube10
+    400080: pCube11
+    400082: pCube12
+    400084: pCube13
+    400086: pCube14
+    400088: pCube2
+    400090: pCube3
+    400092: pCube9
+    400094: pCylinder1
+    400096: pCylinder2
+    400098: pCylinder3
+    400100: pCylinder4
+    400102: pCylinder5
+    400104: pCylinder6
+    400106: pCylinder7
+    400108: pCylinder8
+    400110: polySurface1
+    400112: polySurface1 1
+    400114: polySurface2
+    400116: polySurface3
+    400118: pPlane1
+    400120: pPlane2
+    400122: transform1
+    400124: transform10
+    400126: transform11
+    400128: transform12
+    400130: transform13
+    400132: transform14
+    400134: transform15
+    400136: transform16
+    400138: transform17
+    400140: transform18
+    400142: transform19
+    400144: transform2
+    400146: transform20
+    400148: transform21
+    400150: transform22
+    400152: transform23
+    400154: transform24
+    400156: transform25
+    400158: transform26
+    400160: transform27
+    400162: transform28
+    400164: transform29
+    400166: transform3
+    400168: transform30
+    400170: transform31
+    400172: transform32
+    400174: transform33
+    400176: transform34
+    400178: transform35
+    400180: transform36
+    400182: transform37
+    400184: transform4
+    400186: transform5
+    400188: transform6
+    400190: transform7
+    400192: transform8
+    400194: transform9
+    2300000: 24 Ligne Roset Citta armchair1_MeshPart0
+    2300002: 24 Ligne Roset Citta armchair1_MeshPart1
+    3300000: 24 Ligne Roset Citta armchair1_MeshPart0
+    3300002: 24 Ligne Roset Citta armchair1_MeshPart1
+    4300000: 24 Ligne Roset Citta armchair1_MeshPart0
+    4300002: 24 Ligne Roset Citta armchair1_MeshPart1
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
