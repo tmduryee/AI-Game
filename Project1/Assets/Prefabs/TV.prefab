@@ -76,6 +76,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 446048}
+  - 65: {fileID: 6562618}
   m_Layer: 0
   m_Name: TV
   m_TagString: Untagged
@@ -594,6 +595,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114280}
   m_Mesh: {fileID: 4300024, guid: 656c7c44124f23e46966cd78a3ae4d4d, type: 3}
+--- !u!65 &6562618
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 38.8927231, y: 27.1147728, z: 10.4350586}
+  m_Center: {x: 1.51114655, y: -11.361536, z: 6.55189896}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

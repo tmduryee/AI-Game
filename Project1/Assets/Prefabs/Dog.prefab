@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2392458}
   - 114: {fileID: 11436278}
   - 195: {fileID: 19559942}
+  - 65: {fileID: 6569506}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Dog
@@ -64,6 +65,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112082}
   m_Mesh: {fileID: 4300000, guid: 4cb8f3220445bf644b606913cacd4b89, type: 3}
+--- !u!65 &6569506
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.72572637, y: 1.18788791, z: .933860719}
+  m_Center: {x: .0978794396, y: -.0476498082, z: .464050949}
 --- !u!114 &11436278
 MonoBehaviour:
   m_ObjectHideFlags: 1

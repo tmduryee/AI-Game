@@ -26,6 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 428526}
   - 114: {fileID: 11481930}
+  - 65: {fileID: 6529562}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Cat
@@ -91,6 +92,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104562}
   m_Mesh: {fileID: 4300000, guid: 16164af3798831e47bfd574d6ed2b708, type: 3}
+--- !u!65 &6529562
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .405365199, y: .741843045, z: 1.18451059}
+  m_Center: {x: -2.47209282e-05, y: .372168392, z: .383217752}
 --- !u!114 &11481930
 MonoBehaviour:
   m_ObjectHideFlags: 1

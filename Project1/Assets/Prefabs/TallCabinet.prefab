@@ -144,6 +144,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 448620}
+  - 65: {fileID: 6586312}
   m_Layer: 0
   m_Name: TallCabinet
   m_TagString: Untagged
@@ -257,8 +258,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.90734863e-06, y: 25.2000008, z: 37.7950287}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -106.185997, y: 25.2000008, z: -44.4000015}
+  m_LocalScale: {x: 1.55699921, y: 1, z: .606355786}
   m_Children:
   - {fileID: 425828}
   - {fileID: 458056}
@@ -720,6 +721,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129288}
   m_Mesh: {fileID: 4300036, guid: 656c7c44124f23e46966cd78a3ae4d4d, type: 3}
+--- !u!65 &6586312
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 25.2554455, y: 49.9341965, z: 21.8799248}
+  m_Center: {x: 34.0966835, y: .194778442, z: 1.66671765}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
