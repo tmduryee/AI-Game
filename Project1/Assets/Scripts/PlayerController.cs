@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
     public float playerSpeed = 1.0f;
-	public float rotateSpeed = 3.0f;
+	public float rotateSpeed = 4.0f;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour {
 		float side = Input.GetAxis("Horizontal");
 		float rotY = Input.GetAxis("Mouse X");
 
-		gameObject.transform.Rotate(0, rotY * rotateSpeed, 0);
+        if (Input.GetMouseButton(0))
+        {
+            gameObject.transform.Rotate(0, rotY * rotateSpeed, 0);
+        }
     }
 }

@@ -2,16 +2,11 @@
 using System.Collections;
 
 public class Mouse : MonoBehaviour {
-
-    Seek sComponent;
-    Flee fComponent;
-    Wander wComponent;
+    AI aiComponent;
     
 	void Start ()
     {
-        sComponent = this.GetComponent<Seek>();
-        fComponent = this.GetComponent<Flee>();
-        wComponent = this.GetComponent<Wander>();
+        aiComponent = this.GetComponent<AI>();
 	}
 	
 	void Update ()
@@ -19,9 +14,9 @@ public class Mouse : MonoBehaviour {
         Vector3 myPos = transform.position;
         Vector3 catPos = GameObject.FindGameObjectWithTag("Cat").transform.position;
 
-        if(Vector3.Distance(myPos, catPos) < fComponent.fleeRadius)
+        if (Vector3.Distance(myPos, catPos) < aiComponent.fleeRadius)
         {
-            fComponent.Execute();
+            aiComponent.Flee(GameObject.FindGameObjectWithTag("Cat"));
         }
         else
         {
@@ -30,26 +25,40 @@ public class Mouse : MonoBehaviour {
             Vector3 cheesePos;
             float distance;
 
-            foreach(GameObject c in cheese)
+            foreach (GameObject c in cheese)
             {
                 cheesePos = c.transform.position;
                 distance = Vector3.Distance(myPos, cheesePos);
 
-                if (distance < sComponent.seekRadius &&  (closestCheese == null || distance < Vector3.Distance(myPos, closestCheese.transform.position)))
+                if (distance < aiComponent.seekRadius && (closestCheese == null || distance < Vector3.Distance(myPos, closestCheese.transform.position)))
                 {
                     closestCheese = c;
                 }
             }
 
-            if(!closestCheese)
+            if (!closestCheese)
             {
-                wComponent.Execute();
+                aiComponent.Wander();
             }
             else
             {
-                sComponent.Execute(closestCheese);
+                if (Vector3.Distance(myPos, closestCheese.transform.position) < 2)
+                {
+                    closestCheese.GetComponent<Cheese>().Eat();
+                }
+                else
+                {
+                    aiComponent.Seek(closestCheese);
+                }
             }
         }
-
 	}
+
+    void OnCollisionEnter(Collision c)
+    {
+        if(c.collider.tag == "Cat")
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

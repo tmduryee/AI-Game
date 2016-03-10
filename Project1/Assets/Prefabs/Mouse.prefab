@@ -26,11 +26,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 490062}
   - 195: {fileID: 19515796}
-  - 114: {fileID: 11421470}
-  - 114: {fileID: 11493776}
-  - 114: {fileID: 11475738}
-  - 114: {fileID: 11417982}
   - 65: {fileID: 6553826}
+  - 114: {fileID: 11405668}
+  - 114: {fileID: 11444930}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Untagged
@@ -57,8 +55,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.5, y: 0, z: -15.6000004}
-  m_LocalScale: {x: 4.28545332, y: 4.28545618, z: 4.28545618}
+  m_LocalPosition: {x: 30.5, y: 0, z: -15.6}
+  m_LocalScale: {x: 4.2854533, y: 4.285456, z: 4.285456}
   m_Children:
   - {fileID: 444858}
   m_Father: {fileID: 0}
@@ -84,7 +82,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -106,9 +104,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .479154736, y: .522993624, z: 1}
-  m_Center: {x: -.00708381552, y: .238503188, z: 0}
---- !u!114 &11417982
+  m_Size: {x: 0.47915474, y: 0.5229936, z: 1}
+  m_Center: {x: -0.0070838155, y: 0.23850319, z: 0}
+--- !u!114 &11405668
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -116,11 +114,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 178698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceae4f679e15b2c49ad73019341fecda, type: 3}
+  m_Script: {fileID: 11500000, guid: 22e5add1b23eac3438ae67a76ebafe4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderSpeed: 2
---- !u!114 &11421470
+  seekSpeed: 4
+  fleeSpeed: 7
+  wanderSpeed: 4
+  toFlee: '"Cat"'
+  seekRadius: 20
+  seekBoundaryRadius: 5
+  fleeRadius: 50
+--- !u!114 &11444930
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -131,33 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f25207527e755b4d8728dd7a3f9520c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11475738
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87356625df8aff64ca8bc473cff04905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toFlee: Cat
-  fleeRadius: 40
-  fleeSpeed: 5
---- !u!114 &11493776
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff7dcaf77a02a7b4487017d763c92ff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seekRadius: 20
-  seekSpeed: 3
 --- !u!195 &19515796
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -165,7 +142,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178698}
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -174,7 +151,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: .300000012
+  m_Height: 0.3
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
