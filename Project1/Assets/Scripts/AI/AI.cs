@@ -22,7 +22,8 @@ public class AI : MonoBehaviour {
         Vector3 targetPos = target.transform.position;
         Vector3 direction = targetPos - myPos;
         direction.y = 0;
-        transform.Translate(direction.normalized * seekSpeed / 10);
+        transform.LookAt(new Vector3(targetPos.x, 0, targetPos.z));
+        transform.Translate(new Vector3(0, 0, 1) * seekSpeed / 10);
     }
 
 	public void Flee(GameObject target)
@@ -31,8 +32,8 @@ public class AI : MonoBehaviour {
         Vector3 targetPos = target.transform.position;
         Vector3 direction = myPos - targetPos;
         direction.y = 0;
-        
-        transform.Translate(direction.normalized * fleeSpeed / 10);
+        transform.LookAt(-new Vector3(targetPos.x, 0, targetPos.z));
+        transform.Translate(new Vector3(0, 0, 1) * fleeSpeed / 10);
     }
 
     public void Wander()
@@ -40,6 +41,7 @@ public class AI : MonoBehaviour {
         wanderDirection.x += Random.Range(-0.3f, 0.3f);
         wanderDirection.z += Random.Range(-0.3f, 0.3f);
         wanderDirection.Normalize();
-        transform.Translate(wanderDirection * wanderSpeed / 10);
+        transform.LookAt(-new Vector3(wanderDirection.x, 0, wanderDirection.z));
+        transform.Translate(new Vector3(0, 0, 1) * wanderSpeed / 10);
     }
 }
