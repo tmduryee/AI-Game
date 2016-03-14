@@ -3,13 +3,15 @@ using System.Collections;
 
 public class Dog : MonoBehaviour {
 
-    private bool asleep = false;
-    private int hunger = 0;
     private Vector3 foodBowlPos;
     private Vector3 bedPos;
     private AI aiComponent;
 
+    public int hunger = 0;
     public int maxHunger = 100;
+    public bool asleep = false;
+    public bool seekingCat = false;
+    public bool seekingBed = false;
     public GameObject foodBowl;
     public GameObject bed;
 
@@ -61,13 +63,22 @@ public class Dog : MonoBehaviour {
                 {
                     aiComponent.Seek(cat);
                     hunger++;
+                    seekingCat = true;
+                    seekingBed = false;
                 }
                 else
                 {
                     if (Vector3.Distance(transform.position, bedPos) < 10.0f)
+                    {
                         asleep = true;
+                        seekingBed = false;
+                    }
                     else
+                    {
                         aiComponent.Seek(bed);
+                        seekingBed = true;
+                        seekingCat = false;
+                    }
                 }
             }
         }

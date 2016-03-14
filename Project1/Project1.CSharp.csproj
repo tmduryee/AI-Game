@@ -67,13 +67,12 @@
     <Compile Include="Assets\Scripts\AI\Arrive.cs" />
     <Compile Include="Assets\Scripts\Cheese.cs" />
     <Compile Include="Assets\Scripts\Dog.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Mouse.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SceneSwitch.cs" />
     <Compile Include="Assets\Scripts\SmoothFollow.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\sky5X\README.txt" />
+    <Compile Include="Assets\Scripts\UI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

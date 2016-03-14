@@ -58,7 +58,7 @@ public class Mouse : MonoBehaviour {
     {
         if(c.collider.tag == "Cat")
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }
