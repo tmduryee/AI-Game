@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3358988}
   - 23: {fileID: 2303586}
   - 65: {fileID: 6575814}
+  - 208: {fileID: 20822478}
   m_Layer: 0
   m_Name: 24 Ligne Roset Citta sofa
   m_TagString: Untagged
@@ -29,12 +30,13 @@ GameObject:
   - 33: {fileID: 3368866}
   - 23: {fileID: 2374650}
   - 65: {fileID: 6597686}
+  - 208: {fileID: 20817094}
   m_Layer: 0
   m_Name: 24 Ligne Roset Citta armchair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &159856
 GameObject:
@@ -59,23 +61,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146980}
   m_LocalRotation: {x: -.5, y: .5, z: .500000119, w: .49999994}
-  m_LocalPosition: {x: -1.58399999, y: .00300000003, z: 1.08599997}
+  m_LocalPosition: {x: -1.83000004, y: 0, z: .959999979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 473344}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &451824
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100290}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: .0879999995, y: -.0398595743, z: -.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 473344}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &473344
 Transform:
   m_ObjectHideFlags: 1
@@ -83,11 +85,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55, y: .791159987, z: 4.4000001}
+  m_LocalPosition: {x: -55, y: .791159987, z: 10.1000004}
   m_LocalScale: {x: 19.8486538, y: 19.8486557, z: 19.8486557}
   m_Children:
-  - {fileID: 422774}
   - {fileID: 451824}
+  - {fileID: 422774}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &2303586
@@ -199,6 +201,36 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!208 &20817094
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146980}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: .370000005, y: .445000023, z: .383000016}
+  m_MoveThreshold: .100000001
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: .00100000005, y: 0, z: .383000016}
+  m_TimeToStationary: .5
+--- !u!208 &20822478
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100290}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: .829000056, y: .445000023, z: .405000031}
+  m_MoveThreshold: .100000001
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: .379999995}
+  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
