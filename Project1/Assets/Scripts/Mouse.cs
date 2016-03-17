@@ -12,9 +12,23 @@ public class Mouse : MonoBehaviour {
 	void Update ()
     {
         Vector3 myPos = transform.position;
-        Vector3 catPos = GameObject.FindGameObjectWithTag("Cat").transform.position;
-
-        if (Vector3.Distance(myPos, catPos) < aiComponent.fleeRadius)
+        //Vector3 catPos = GameObject.FindGameObjectWithTag("Cat").transform.position;
+		GameObject[] cats = GameObject.FindGameObjectsWithTag("Cat");
+		GameObject closestCat = null;
+		Vector3 catPos;
+		float distanceFromCat;
+		
+		foreach (GameObject c in cats)
+		{
+			catPos = c.transform.position;
+			distanceFromCat = Vector3.Distance(transform.position, catPos);
+			
+			if (distanceFromCat < aiComponent.seekRadius && (closestCat == null || distanceFromCat < Vector3.Distance(transform.position, closestCat.transform.position)))
+			{
+				closestCat = c;
+			}
+		}
+        if (closestCat && Vector3.Distance(myPos, closestCat.transform.position) < aiComponent.fleeRadius)
         {
             aiComponent.Flee(GameObject.FindGameObjectWithTag("Cat"));
         }
@@ -58,7 +72,7 @@ public class Mouse : MonoBehaviour {
     {
         if(c.collider.tag == "Cat")
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
