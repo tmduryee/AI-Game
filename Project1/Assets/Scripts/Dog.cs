@@ -52,20 +52,35 @@ public class Dog : MonoBehaviour {
             // Otherwise lets look for the cat
             else
             {
-                GameObject cat = GameObject.FindGameObjectWithTag("Cat");
-                Vector3 catPos = cat.transform.position;
-                float distance = Vector3.Distance(transform.position, catPos);
+                GameObject[] cats = GameObject.FindGameObjectsWithTag("Cat");
+				GameObject closestCat = null;
+				Vector3 catPos;
+				float distance;
+
+				foreach (GameObject c in cats)
+				{
+					catPos = c.transform.position;
+					distance = Vector3.Distance(transform.position, catPos);
+					
+					if (distance < aiComponent.seekRadius && (closestCat == null || distance < Vector3.Distance(transform.position, closestCat.transform.position)))
+					{
+						closestCat = c;
+					}
+				}
 
                 // If cat is in range
-                if (distance < aiComponent.seekBoundaryRadius)
-                    GameObject.Destroy(cat);
-                else if (distance < aiComponent.seekRadius)
-                {
-                    aiComponent.Seek(cat);
-                    hunger++;
-                    seekingCat = true;
-                    seekingBed = false;
-                }
+				if (closestCat) 
+				{
+					if (Vector3.Distance(transform.position, closestCat.transform.position) < aiComponent.seekBoundaryRadius)
+						GameObject.Destroy(closestCat);
+					else if (Vector3.Distance(transform.position, closestCat.transform.position) < aiComponent.seekRadius)
+					{
+						aiComponent.Seek(closestCat);
+						hunger++;
+						seekingCat = true;
+						seekingBed = false;
+					}
+				}                
                 else
                 {
                     if (Vector3.Distance(transform.position, bedPos) < 10.0f)
