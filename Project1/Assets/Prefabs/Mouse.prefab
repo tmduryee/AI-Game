@@ -31,7 +31,7 @@ GameObject:
   - 114: {fileID: 11444930}
   m_Layer: 0
   m_Name: Mouse
-  m_TagString: Untagged
+  m_TagString: Mouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,9 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e5add1b23eac3438ae67a76ebafe4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seekSpeed: 4
-  fleeSpeed: 7
-  wanderSpeed: 4
+  seekSpeed: 7
+  fleeSpeed: 10
+  wanderSpeed: 9
   toFlee: '"Cat"'
   seekRadius: 20
   seekBoundaryRadius: 5

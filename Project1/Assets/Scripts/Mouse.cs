@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Mouse : MonoBehaviour {
+public class Mouse : Entity {
     AI aiComponent;
     
 	void Start ()
@@ -12,25 +12,26 @@ public class Mouse : MonoBehaviour {
 	void Update ()
     {
         Vector3 myPos = transform.position;
-        //Vector3 catPos = GameObject.FindGameObjectWithTag("Cat").transform.position;
 		GameObject[] cats = GameObject.FindGameObjectsWithTag("Cat");
 		GameObject closestCat = null;
 		Vector3 catPos;
 		float distanceFromCat;
 		
+        // First find the closest cat
 		foreach (GameObject c in cats)
 		{
 			catPos = c.transform.position;
 			distanceFromCat = Vector3.Distance(transform.position, catPos);
 			
-			if (distanceFromCat < aiComponent.seekRadius && (closestCat == null || distanceFromCat < Vector3.Distance(transform.position, closestCat.transform.position)))
+			if (closestCat == null || distanceFromCat < Vector3.Distance(transform.position, closestCat.transform.position))
 			{
 				closestCat = c;
 			}
 		}
-        if (closestCat && Vector3.Distance(myPos, closestCat.transform.position) < aiComponent.fleeRadius)
+
+        if (Vector3.Distance(myPos, closestCat.transform.position) < aiComponent.fleeRadius)
         {
-            aiComponent.Flee(GameObject.FindGameObjectWithTag("Cat"));
+            aiComponent.Flee(closestCat);
         }
         else
         {
@@ -52,7 +53,7 @@ public class Mouse : MonoBehaviour {
 
             if (!closestCheese)
             {
-                aiComponent.Wander();
+                aiComponent.Wander(lastFramePosition);
             }
             else
             {
@@ -66,7 +67,9 @@ public class Mouse : MonoBehaviour {
                 }
             }
         }
-	}
+
+        lastFramePosition = transform.position;
+    }
 
     void OnCollisionEnter(Collision c)
     {

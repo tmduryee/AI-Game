@@ -27,6 +27,7 @@ GameObject:
   - 4: {fileID: 417000}
   - 114: {fileID: 11451432}
   - 195: {fileID: 19558864}
+  - 33: {fileID: 3352838}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Cat
@@ -92,6 +93,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107426}
   m_Mesh: {fileID: 4300000, guid: 16164af3798831e47bfd574d6ed2b708, type: 3}
+--- !u!33 &3352838
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158222}
+  m_Mesh: {fileID: 0}
 --- !u!114 &11451432
 MonoBehaviour:
   m_ObjectHideFlags: 1

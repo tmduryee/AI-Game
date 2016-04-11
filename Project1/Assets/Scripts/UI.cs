@@ -18,7 +18,6 @@ public class UI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         dog = GameObject.FindGameObjectWithTag("Dog").GetComponent<Dog>();
-        gManager = this.GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
@@ -28,6 +27,8 @@ public class UI : MonoBehaviour {
 
     void OnGUI()
     {
+        GameManager gManager = this.GetComponent<GameManager>();
+
         // Cat info
         GUI.DrawTexture(new Rect(10, 10, 150, 150), kittyPortrait);
 
