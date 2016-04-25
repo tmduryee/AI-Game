@@ -3,10 +3,6 @@ using System.Collections;
 
 public class Dog : Entity
 {
-
-    private Vector3 foodBowlPos;
-    private Vector3 bedPos;
-
     public int hunger = 0;
     public int maxHunger = 100;
     public bool asleep = false;
@@ -14,16 +10,33 @@ public class Dog : Entity
     public bool seekingBed = false;
     public GameObject foodBowl;
     public GameObject bed;
-    
-	void Start ()
+
+    private Vector3 foodBowlPos;
+    private Vector3 bedPos;
+    private PathFollow pFollow;
+
+    void Start ()
     {
         aiComponent = this.GetComponent<AI>();
         foodBowlPos = foodBowl.transform.position;
         bedPos = bed.transform.position;
-	}
-	
 
-	void Update ()
+        pFollow = new PathFollow(this.transform);
+        Node first = new Node(new Vector3(-78.9f, 0.003508392f, -129.0f));
+        Node second = new Node(new Vector3(-26.5f, 0.003508392f, -50.8f));
+        Node third = new Node(new Vector3(6.8f, 0.003508392f, -48.8f));
+        Node fourth = new Node(new Vector3(66.5f, 0.003508392f, -34.7f));
+        Node fifth = new Node(new Vector3(140.9f, 0.003508392f, -39.3f));
+
+        pFollow.AddWaypoint(first);
+        pFollow.AddWaypoint(second);
+        pFollow.AddWaypoint(third);
+        pFollow.AddWaypoint(fourth);
+        pFollow.AddWaypoint(fifth);
+    }
+
+
+    void Update ()
     {
         // If dog is asleep
         if (asleep)
@@ -43,11 +56,11 @@ public class Dog : Entity
                 if (Vector3.Distance(transform.position, foodBowlPos) < 5.0f)
                 {
                     hunger = 0;
-                    Debug.Log("Hit");
                 }
                 else
                 {
-                    aiComponent.Seek(foodBowl);
+                    pFollow.Follow(true, aiComponent.seekSpeed * 3.0f, seekingCat);
+                    seekingCat = false;
                 }
             }
             // Otherwise lets look for the cat
@@ -91,7 +104,7 @@ public class Dog : Entity
                     }
                     else
                     {
-                        aiComponent.Seek(bed);
+                        pFollow.Follow(false, aiComponent.seekSpeed * 3.0f, seekingCat);
                         seekingBed = true;
                         seekingCat = false;
                     }

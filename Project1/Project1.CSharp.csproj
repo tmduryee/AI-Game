@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\AI\EnemyCat.cs" />
     <Compile Include="Assets\Scripts\AI\Entity.cs" />
     <Compile Include="Assets\Scripts\AI\Mouse.cs" />
+    <Compile Include="Assets\Scripts\AI\PathFollow.cs" />
     <Compile Include="Assets\Scripts\Cheese.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />

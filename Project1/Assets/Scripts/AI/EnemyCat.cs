@@ -51,7 +51,7 @@ public class EnemyCat : Entity
             // If the mouse is close enough eat it
             if (Vector3.Distance(myPos, target.transform.position) < 9)
             {
-                GameObject.Destroy(target);
+                //GameObject.Destroy(target);
             }
             else
             {

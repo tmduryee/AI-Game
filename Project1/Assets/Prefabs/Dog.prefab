@@ -173,7 +173,6 @@ MonoBehaviour:
   seekSpeed: 5
   fleeSpeed: 8
   wanderSpeed: 5
-  toFlee: 
   seekRadius: 50
   seekBoundaryRadius: 5
   fleeRadius: 100
