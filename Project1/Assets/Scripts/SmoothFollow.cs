@@ -10,7 +10,7 @@ public class SmoothFollow : MonoBehaviour
     public float heightDamping = 2.0f;
     public float rotationDamping = 3.0f;
 
-	void LateUpdate ()
+	void Update ()
     {
         // early out if we don't have a target
         if (!target)

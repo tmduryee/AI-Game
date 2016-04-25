@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Cheese : MonoBehaviour {
+public class Cheese : MonoBehaviour
+{
     public int cheeseLeft = 5;
 
 	// Use this for initialization

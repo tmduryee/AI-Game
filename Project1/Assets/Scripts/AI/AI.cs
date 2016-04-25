@@ -12,6 +12,8 @@ public class AI : MonoBehaviour
     public float seekBoundaryRadius     = 5.0f;
     public float fleeRadius             = 100.0f;
 
+    protected Vector3 lastFramePosition;
+
     public void Seek(GameObject target)
     {
         Vector3 myPos = transform.position;

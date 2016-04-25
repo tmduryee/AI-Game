@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UI : MonoBehaviour {
-
+public class UI : MonoBehaviour
+{
     public Texture kittyPortrait;
     public Texture dogAsleep;
     public Texture dogAngry;
@@ -13,15 +13,16 @@ public class UI : MonoBehaviour {
     public GUISkin skin;
 
     private Dog dog;
-    private GameManager gManager;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         dog = GameObject.FindGameObjectWithTag("Dog").GetComponent<Dog>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	    
 	}
 

@@ -1,51 +1,54 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Mouse : Entity {
-    AI aiComponent;
-    
+public class Mouse : Entity
+{
+    private GameObject[] cats;
+
 	void Start ()
     {
         aiComponent = this.GetComponent<AI>();
+        cats = GameObject.FindGameObjectsWithTag("Cat");
 	}
 	
 	void Update ()
     {
         Vector3 myPos = transform.position;
-		GameObject[] cats = GameObject.FindGameObjectsWithTag("Cat");
-		GameObject closestCat = null;
-		Vector3 catPos;
-		float distanceFromCat;
+        GameObject closestCat = null;
+        Vector3 currentCatPos = new Vector3();
+		float distanceFromCat = 0.0f;
 		
         // First find the closest cat
 		foreach (GameObject c in cats)
 		{
-			catPos = c.transform.position;
-			distanceFromCat = Vector3.Distance(transform.position, catPos);
+			currentCatPos = c.transform.position;
+			distanceFromCat = Vector3.Distance(transform.position, currentCatPos);
 			
-			if (closestCat == null || distanceFromCat < Vector3.Distance(transform.position, closestCat.transform.position))
+			if (closestCat == null || distanceFromCat < Vector3.Distance(myPos, closestCat.transform.position))
 			{
 				closestCat = c;
 			}
 		}
 
+        // If the closest cat is too close flee it
         if (Vector3.Distance(myPos, closestCat.transform.position) < aiComponent.fleeRadius)
         {
             aiComponent.Flee(closestCat);
         }
+        // Otherwise let's find some cheese
         else
         {
             GameObject[] cheese = GameObject.FindGameObjectsWithTag("Cheese");
             GameObject closestCheese = null;
-            Vector3 cheesePos;
-            float distance;
+            Vector3 currentCheesePos = new Vector3();
+            float distanceFromCheese = 0.0f;
 
             foreach (GameObject c in cheese)
             {
-                cheesePos = c.transform.position;
-                distance = Vector3.Distance(myPos, cheesePos);
+                currentCheesePos = c.transform.position;
+                distanceFromCheese = Vector3.Distance(myPos, currentCheesePos);
 
-                if (distance < aiComponent.seekRadius && (closestCheese == null || distance < Vector3.Distance(myPos, closestCheese.transform.position)))
+                if (distanceFromCheese < aiComponent.seekRadius && (closestCheese == null || distanceFromCheese < Vector3.Distance(myPos, closestCheese.transform.position)))
                 {
                     closestCheese = c;
                 }

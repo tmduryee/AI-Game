@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Dog : MonoBehaviour {
+public class Dog : Entity
+{
 
     private Vector3 foodBowlPos;
     private Vector3 bedPos;
-    private AI aiComponent;
 
     public int hunger = 0;
     public int maxHunger = 100;
@@ -14,16 +14,17 @@ public class Dog : MonoBehaviour {
     public bool seekingBed = false;
     public GameObject foodBowl;
     public GameObject bed;
-
-	// Use this for initialization
-	void Start () {
+    
+	void Start ()
+    {
+        aiComponent = this.GetComponent<AI>();
         foodBowlPos = foodBowl.transform.position;
         bedPos = bed.transform.position;
-        aiComponent = this.GetComponent<AI>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
+
+	void Update ()
+    {
         // If dog is asleep
         if (asleep)
         {

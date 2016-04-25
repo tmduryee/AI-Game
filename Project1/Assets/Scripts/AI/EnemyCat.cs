@@ -3,8 +3,6 @@ using System.Collections;
 
 public class EnemyCat : Entity
 {
-
-    AI aiComponent;
     GameObject dog;
     GameObject target;
 
@@ -59,9 +57,6 @@ public class EnemyCat : Entity
             {
                 aiComponent.Seek(target);
             }
-
         }
-
-        lastFramePosition = transform.position;
     }
 }

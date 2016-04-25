@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     public float playerSpeed = 1.0f;
 	public float rotateSpeed = 4.0f;
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate ()
+    {
 	    if (Input.GetKey(KeyCode.W)) transform.Translate(new Vector3(0, 0, playerSpeed));
         if (Input.GetKey(KeyCode.A)) transform.Translate(new Vector3(-playerSpeed/2, 0, 0));
         if (Input.GetKey(KeyCode.S)) transform.Translate(new Vector3(0, 0, -playerSpeed/2));
