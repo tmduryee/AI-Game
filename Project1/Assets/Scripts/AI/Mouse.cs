@@ -70,8 +70,6 @@ public class Mouse : Entity
                 }
             }
         }
-
-        lastFramePosition = transform.position;
     }
 
     void OnCollisionEnter(Collision c)

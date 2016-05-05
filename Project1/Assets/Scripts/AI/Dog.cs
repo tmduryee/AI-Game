@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Dog : Entity
 {
-    public int hunger = 0;
+    public float hunger = 0.0f;
     public int maxHunger = 100;
     public bool asleep = false;
     public bool seekingCat = false;
@@ -45,7 +45,7 @@ public class Dog : Entity
             if (hunger >= maxHunger)
                 asleep = false;
             else
-                hunger++;
+				hunger += Time.deltaTime * 15;
         }
         else
         {
@@ -59,7 +59,7 @@ public class Dog : Entity
                 }
                 else
                 {
-                    pFollow.Follow(true, aiComponent.seekSpeed * 3.0f, seekingCat);
+                    pFollow.Follow(true, aiComponent.seekSpeed, seekingCat);
                     seekingCat = false;
                 }
             }
@@ -90,7 +90,7 @@ public class Dog : Entity
 					else if (Vector3.Distance(transform.position, closestCat.transform.position) < aiComponent.seekRadius)
 					{
 						aiComponent.Seek(closestCat);
-						hunger++;
+						hunger += Time.deltaTime * 15;
 						seekingCat = true;
 						seekingBed = false;
 					}
@@ -104,7 +104,7 @@ public class Dog : Entity
                     }
                     else
                     {
-                        pFollow.Follow(false, aiComponent.seekSpeed * 3.0f, seekingCat);
+                        pFollow.Follow(false, aiComponent.seekSpeed, seekingCat);
                         seekingBed = true;
                         seekingCat = false;
                     }

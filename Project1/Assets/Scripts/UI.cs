@@ -65,6 +65,6 @@ public class UI : MonoBehaviour
         }
 
         GUI.TextField(new Rect(85, Screen.height - 75, 100, 30), dogStatus, skin.textField);
-        GUI.TextField(new Rect(85, Screen.height - 40, 100, 30), "Hunger: " + dog.hunger, skin.textField);
+        GUI.TextField(new Rect(85, Screen.height - 40, 100, 30), "Hunger: " + (int)dog.hunger, skin.textField);
     }
 }

@@ -7,12 +7,13 @@ public class Entity : MonoBehaviour
     protected Vector3 lastFramePosition;
   
 	void Start ()
-    {
+    {	
+
 	}
 	
 	void Update ()
     {
-	
+		
 	}
 
     void LateUpdate()
