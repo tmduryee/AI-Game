@@ -4,7 +4,7 @@ using System.Collections;
 public class Dog : Entity
 {
     public float hunger = 0.0f;
-    public int maxHunger = 100;
+    public int maxHunger = 200;
     public bool asleep = false;
     public bool seekingCat = false;
     public bool seekingBed = false;

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Cheese : MonoBehaviour
 {
-    public int cheeseLeft = 5;
+    public int cheeseLeft = 100;
 
 	// Use this for initialization
 	void Start () {
