@@ -13,6 +13,7 @@ public class UI : MonoBehaviour
     public GUISkin skin;
 
     private Dog dog;
+	public static int score;
 
 	// Use this for initialization
 	void Start ()
@@ -66,5 +67,7 @@ public class UI : MonoBehaviour
 
         GUI.TextField(new Rect(85, Screen.height - 75, 100, 30), dogStatus, skin.textField);
         GUI.TextField(new Rect(85, Screen.height - 40, 100, 30), "Hunger: " + (int)dog.hunger, skin.textField);
-    }
+
+		GUI.TextField(new Rect(Screen.width - 100, Screen.height - 75, 100, 30), "Score: " + score, skin.textField);
+	}
 }

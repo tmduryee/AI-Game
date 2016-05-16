@@ -34,6 +34,14 @@ public class Mouse : Entity
         if (Vector3.Distance(myPos, closestCat.transform.position) < aiComponent.fleeRadius)
         {
             aiComponent.Flee(closestCat);
+
+			// Mouse was caught!
+			if (Vector3.Distance(transform.position, closestCat.transform.position) < 10.0f) {
+				if (closestCat.name == "Cat") {
+					UI.score++;
+					Destroy (this.gameObject);
+				}
+			}
         }
         // Otherwise let's find some cheese
         else
