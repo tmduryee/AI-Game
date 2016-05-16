@@ -93,6 +93,12 @@ public class Dog : Entity
 						hunger += Time.deltaTime * 15;
 						seekingCat = true;
 						seekingBed = false;
+
+						if (Vector3.Distance(transform.position, closestCat.transform.position) < 20.0f) {
+							if (closestCat.name == "Cat") {
+								Application.LoadLevel("gameOver");
+							}
+						}
 					}
 				}                
                 else
