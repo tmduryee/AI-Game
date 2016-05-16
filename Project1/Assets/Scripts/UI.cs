@@ -19,12 +19,8 @@ public class UI : MonoBehaviour
 	void Start ()
     {
         dog = GameObject.FindGameObjectWithTag("Dog").GetComponent<Dog>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-	    
+		score = 0;
+		scoreEnemy = 0;
 	}
 
     void OnGUI()

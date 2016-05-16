@@ -155,9 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e5add1b23eac3438ae67a76ebafe4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seekSpeed: 5
-  fleeSpeed: 6
-  wanderSpeed: 9
+  seekSpeed: 6
+  fleeSpeed: 9
+  wanderSpeed: 7
   seekRadius: 50
   seekBoundaryRadius: 5
   fleeRadius: 60

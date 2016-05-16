@@ -749,6 +749,18 @@ Prefab:
       propertyPath: m_Name
       value: EnemyCat
       objectReference: {fileID: 0}
+    - target: {fileID: 11493778, guid: c8e59ee0436142e4a8a6f7e03c58af27, type: 2}
+      propertyPath: seekSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493778, guid: c8e59ee0436142e4a8a6f7e03c58af27, type: 2}
+      propertyPath: fleeSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493778, guid: c8e59ee0436142e4a8a6f7e03c58af27, type: 2}
+      propertyPath: wanderSpeed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8e59ee0436142e4a8a6f7e03c58af27, type: 2}
   m_IsPrefabParent: 0
@@ -3735,8 +3747,7 @@ Prefab:
       propertyPath: bed
       value: 
       objectReference: {fileID: 713038164}
-    m_RemovedComponents:
-    - {fileID: 11494488, guid: 3740a000aec9e8f46b7c83438b5a1134, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3740a000aec9e8f46b7c83438b5a1134, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1606936048
@@ -3814,27 +3825,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 230630994}
   m_RootOrder: 3
---- !u!1 &1615076533 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 174946, guid: 3740a000aec9e8f46b7c83438b5a1134, type: 2}
-  m_PrefabInternal: {fileID: 1603407972}
---- !u!114 &1615076540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1615076533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e5add1b23eac3438ae67a76ebafe4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seekSpeed: 18
-  fleeSpeed: 20
-  wanderSpeed: 14
-  seekRadius: 100
-  seekBoundaryRadius: 5
-  fleeRadius: 50
 --- !u!1001 &1619858321
 Prefab:
   m_ObjectHideFlags: 0

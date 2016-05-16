@@ -41,6 +41,10 @@ public class Mouse : Entity
 					UI.score++;
 					Destroy (this.gameObject);
 				}
+				else if (closestCat.name == "EnemyCat") {
+					UI.scoreEnemy++;
+					Destroy (this.gameObject);
+				}
 			}
         }
         // Otherwise let's find some cheese

@@ -48,13 +48,8 @@ public class EnemyCat : Entity
                 target = closestMouse;
             }
 
-            // If the mouse is close enough eat it
-            if (Vector3.Distance(myPos, target.transform.position) < 9)
-            {
-                //GameObject.Destroy(target);
-            }
-            else
-            {
+            // Seek mouse
+			if (target != null) {
                 aiComponent.Seek(target);
             }
         }

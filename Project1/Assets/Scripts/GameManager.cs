@@ -23,13 +23,13 @@ public class GameManager : MonoBehaviour
 	void Update ()
     {
         ArrayList cheeseStillAlive = new ArrayList();
-        foreach(Cheese c in currentCheese)
-        {
-            if (c.cheeseLeft > 0)
-                cheeseStillAlive.Add(c);
-        }
-
-        currentCheese = cheeseStillAlive;
+		if (currentCheese.Count > 0) {
+			foreach (Cheese c in currentCheese) {
+				if (c.cheeseLeft > 0)
+					cheeseStillAlive.Add (c);
+			}
+			currentCheese = cheeseStillAlive;
+		}
 
 		// Check Mice
 		GameObject[] miceObj = GameObject.FindGameObjectsWithTag("Mouse");
