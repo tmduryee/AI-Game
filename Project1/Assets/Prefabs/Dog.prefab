@@ -28,9 +28,9 @@ GameObject:
   - 65: {fileID: 6506290}
   - 195: {fileID: 19546662}
   - 114: {fileID: 11403568}
-  - 114: {fileID: 11494488}
   - 33: {fileID: 3328032}
   - 23: {fileID: 2360968}
+  - 114: {fileID: 11406772}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Dog
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 109.5, y: 0.003508392, z: 19.9}
+  m_LocalPosition: {x: -78.9, y: 0.003508392, z: -129}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 434048}
@@ -153,13 +153,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hunger: 0
-  maxHunger: 100
+  maxHunger: 200
   asleep: 0
   seekingCat: 0
   seekingBed: 0
-  foodBowl: {fileID: 134936, guid: b3afd43c90446c04db2e747a39bf6ebf, type: 2}
-  bed: {fileID: 116116, guid: 20340f405ee754d4aa28b9e14d2e9bf9, type: 2}
---- !u!114 &11494488
+  foodBowl: {fileID: 0}
+  bed: {fileID: 0}
+--- !u!114 &11406772
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -170,12 +170,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e5add1b23eac3438ae67a76ebafe4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seekSpeed: 5
-  fleeSpeed: 8
-  wanderSpeed: 5
-  seekRadius: 50
+  seekSpeed: 18
+  fleeSpeed: 20
+  wanderSpeed: 14
+  seekRadius: 100
   seekBoundaryRadius: 5
-  fleeRadius: 100
+  fleeRadius: 50
 --- !u!195 &19546662
 NavMeshAgent:
   m_ObjectHideFlags: 1

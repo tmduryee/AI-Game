@@ -118,12 +118,4 @@ public class Dog : Entity
             }
         }
 	}
-
-    void OnCollisionEnter(Collision c)
-    {
-        if (c.collider.tag == "Cat")
-        {
-            //Destroy(c.gameObject);
-        }
-    }
 }
