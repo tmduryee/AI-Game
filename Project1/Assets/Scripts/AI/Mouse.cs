@@ -4,11 +4,20 @@ using System.Collections;
 public class Mouse : Entity
 {
     private GameObject[] cats;
+	private Vector3 lastFramePosition;
+
+	// Genetic Algorithm stuff
+	private Vector3 originPos;
 
 	void Start ()
     {
         aiComponent = this.GetComponent<AI>();
         cats = GameObject.FindGameObjectsWithTag("Cat");
+
+		lastFramePosition = this.transform.position;
+
+		// Genetic Algorithm stuff
+		originPos = this.transform.position;
 	}
 	
 	void Update ()
@@ -82,13 +91,21 @@ public class Mouse : Entity
                 }
             }
         }
+		lastFramePosition = myPos;
     }
 
-    void OnCollisionEnter(Collision c)
+	// What is the point of this?
+    /*void OnCollisionEnter(Collision c)
     {
         if(c.collider.tag == "Cat")
         {
             //Destroy(gameObject);
         }
-    }
+    }*/
+
+	// Genetic Algortithm methods
+	public void resetMouse()
+	{
+		this.transform.position = originPos;
+	}
 }

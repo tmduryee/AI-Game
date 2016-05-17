@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 public class Dog : Entity
@@ -14,6 +15,12 @@ public class Dog : Entity
     private Vector3 foodBowlPos;
     private Vector3 bedPos;
     private PathFollow pFollow;
+
+	// Genetic Algorithm stuff
+	private int seekCount = 0; // Records number of times a cat is sought after
+	private int catCount = 0; // Records number of times a cat is eaten/attacked (this dog is fucking vicious if it actually eats the cat!)
+	private int eatCount = 0; // Records number of times dog eats out of food bowl
+	private Vector3 originPos; // Stores the dog's original position which is used for resetting the dog
 
     void Start ()
     {
@@ -33,6 +40,8 @@ public class Dog : Entity
         pFollow.AddWaypoint(third);
         pFollow.AddWaypoint(fourth);
         pFollow.AddWaypoint(fifth);
+
+		originPos = this.transform.position;
     }
 
 
@@ -41,14 +50,19 @@ public class Dog : Entity
         // If dog is asleep
         if (asleep)
         {
-            // Wake him up if he's hungry
+			Console.WriteLine ("Dog is sleeping");
+			// Wake him up if he's hungry
             if (hunger >= maxHunger)
                 asleep = false;
             else
+			{
 				hunger += Time.deltaTime * 15;
+				Console.WriteLine("Dog is getting hungry");
+			}
         }
         else
         {
+			Console.WriteLine ("Dog is awake");
             // Check to see if he currently needs food
             if(hunger >= maxHunger)
             {
@@ -56,6 +70,9 @@ public class Dog : Entity
                 if (Vector3.Distance(transform.position, foodBowlPos) < 5.0f)
                 {
                     hunger = 0;
+
+					// Genetic Algorithm content
+					eatCount++;
                 }
                 else
                 {
@@ -91,6 +108,12 @@ public class Dog : Entity
 					{
 						aiComponent.Seek(closestCat);
 						hunger += Time.deltaTime * 15;
+
+						// Genetic Algorithm content
+						// adds 1 to seekCount ONLY ONCE PER CAT SEEK
+						if (!seekingCat)
+							seekCount++;
+						
 						seekingCat = true;
 						seekingBed = false;
 
@@ -118,4 +141,45 @@ public class Dog : Entity
             }
         }
 	}
+
+	// Genetic Algorithm Methods
+
+	// sets a new path for the dog to follow
+	public void setPath(Vector3[] path)
+	{
+		pFollow = new PathFollow(this.transform);
+
+		for (int i = 0; i < path.Length; i++)
+		{
+			Node n = new Node(path[i]);
+
+			pFollow.AddWaypoint(n);
+		}
+	}
+
+	public int getScore()
+	{
+		return seekCount + (catCount * 3);
+	}
+
+	public int getEatCount()
+	{
+		return eatCount;
+	}
+
+	// this gets called when the current path variation is done being tested
+	public void resetDog(Vector3[] path)
+	{
+		this.transform.position = originPos; // reset position
+
+		// reset counts
+		seekCount = 0;
+		catCount = 0;
+		eatCount = 0;
+		hunger = 0.0f;
+
+		// set new path
+		setPath(path);
+	}
+
 }

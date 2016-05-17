@@ -5,12 +5,20 @@ public class EnemyCat : Entity
 {
     GameObject dog;
     GameObject target;
+	private Vector3 lastFramePosition;
+
+	// Genetic Algorithm stuff
+	private Vector3 originPos;
 
     void Start()
     {
         aiComponent = this.GetComponent<AI>();
         dog = GameObject.FindGameObjectWithTag("Dog");
         target = null;
+		lastFramePosition = this.transform.position;
+
+		// Genetic Algorithm stuff
+		originPos = this.transform.position;
     }
 
     void Update()
@@ -49,9 +57,20 @@ public class EnemyCat : Entity
             }
 
             // Seek mouse
-			if (target != null) {
+			if (target != null && Vector3.Distance(myPos, target.transform.position) < aiComponent.seekRadius) {
                 aiComponent.Seek(target);
             }
+			else
+			{
+				aiComponent.Wander(lastFramePosition);
+			}
         }
+		lastFramePosition = myPos;
     }
+
+	// Genetic Algorithm methods
+	public void resetCat()
+	{
+		this.transform.position = originPos;
+	}
 }

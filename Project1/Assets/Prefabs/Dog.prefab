@@ -44,9 +44,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170976}
-  m_LocalRotation: {x: -0.4984503, y: 0.5056591, z: 0.4929843, w: 0.50281477}
+  m_LocalRotation: {x: -.498450309, y: .505659103, z: .492984295, w: .50281477}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.604047, y: 4.6849885, z: 15.855808}
+  m_LocalScale: {x: 5.60404682, y: 4.6849885, z: 15.8558083}
   m_Children: []
   m_Father: {fileID: 473852}
   m_RootOrder: 0
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -78.9, y: 0.003508392, z: -129}
+  m_LocalPosition: {x: -78.9000015, y: .00350839202, z: -129}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 434048}
@@ -84,7 +84,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -110,7 +110,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -139,8 +139,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.807349, y: 14.366882, z: 16.230564}
-  m_Center: {x: 0.1916275, y: 7.914303, z: 1.2329884}
+  m_Size: {x: 5.80734921, y: 14.3668823, z: 16.2305641}
+  m_Center: {x: .191627502, y: 7.91430283, z: 1.23298836}
 --- !u!114 &11403568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,11 +154,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hunger: 0
   maxHunger: 200
-  asleep: 0
+  asleep: 1
   seekingCat: 0
   seekingBed: 0
-  foodBowl: {fileID: 0}
-  bed: {fileID: 0}
+  foodBowl: {fileID: 134936, guid: b3afd43c90446c04db2e747a39bf6ebf, type: 2}
+  bed: {fileID: 116116, guid: 20340f405ee754d4aa28b9e14d2e9bf9, type: 2}
 --- !u!114 &11406772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,7 +173,7 @@ MonoBehaviour:
   seekSpeed: 18
   fleeSpeed: 20
   wanderSpeed: 14
-  seekRadius: 100
+  seekRadius: 30
   seekBoundaryRadius: 5
   fleeRadius: 50
 --- !u!195 &19546662
@@ -183,7 +183,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174946}
   m_Enabled: 1
-  m_Radius: 9.6
+  m_Radius: 9.60000038
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

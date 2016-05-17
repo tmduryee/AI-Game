@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Cheese : MonoBehaviour
 {
-    public int cheeseLeft = 100;
+    public int cheeseLeft = 5;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +14,7 @@ public class Cheese : MonoBehaviour
 	void Update () {
 	    if(cheeseLeft < 0)
         {
-            Destroy(this.gameObject);
+			DestroyCheese();
         }
     }
 
@@ -22,4 +22,9 @@ public class Cheese : MonoBehaviour
     {
         cheeseLeft--;
     }
+
+	public void DestroyCheese()
+	{
+		Destroy(this.gameObject);
+	}
 }
