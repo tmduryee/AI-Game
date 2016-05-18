@@ -69,6 +69,7 @@ public class Dog : Entity
                 // If next to bowl, reset hunger value
                 if (Vector3.Distance(transform.position, foodBowlPos) < 5.0f)
                 {
+					Console.WriteLine ("Dog ate");
                     hunger = 0;
 
 					// Genetic Algorithm content
@@ -106,6 +107,7 @@ public class Dog : Entity
 						GameObject.Destroy(closestCat);
 					else if (Vector3.Distance(transform.position, closestCat.transform.position) < aiComponent.seekRadius)
 					{
+						Console.WriteLine ("Dog is angry and chasing cat");
 						aiComponent.Seek(closestCat);
 						hunger += Time.deltaTime * 15;
 
@@ -136,11 +138,13 @@ public class Dog : Entity
                 {
                     if (Vector3.Distance(transform.position, bedPos) < 10.0f)
                     {
+						Console.WriteLine ("Dog is asleep");
                         asleep = true;
                         seekingBed = false;
                     }
                     else
                     {
+						Console.WriteLine ("Dog is seeking bed");
                         pFollow.Follow(false, aiComponent.seekSpeed, seekingCat);
                         seekingBed = true;
                         seekingCat = false;

@@ -38,8 +38,8 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < cheeseObjs.Length; i++)
         {
-			currentCheese[i] = cheeseObjs[i].GetComponent<Cheese>();
-			originCheeseObjects[i] = cheeseObjs[i];
+			currentCheese.Add(cheeseObjs[i].GetComponent<Cheese>());
+			originCheeseObjects.Add(cheeseObjs[i]);
         }
 
 		// Genetic Algorithm Stuff
