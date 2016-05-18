@@ -79,7 +79,7 @@ public class Mouse : Entity
             }
             else
             {
-                if (Vector3.Distance(myPos, closestCheese.transform.position) < 2)
+                if (Vector3.Distance(myPos, closestCheese.transform.position) < 4.0f)
                 {
                     closestCheese.GetComponent<Cheese>().Eat();
                 }
