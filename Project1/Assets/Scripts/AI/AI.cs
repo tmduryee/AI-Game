@@ -12,6 +12,8 @@ public class AI : MonoBehaviour
     public float seekBoundaryRadius     = 5.0f;
     public float fleeRadius             = 50.0f;
 
+    private int hitWallCounter;
+
     public void Seek(GameObject target)
     {
         Vector3 myPos = transform.position;
@@ -34,9 +36,16 @@ public class AI : MonoBehaviour
         transform.Rotate(Vector3.up, Random.Range(-10.0f, 10.0f));
 		transform.Translate(new Vector3(0, 0, 1) * (wanderSpeed * Time.deltaTime));
 
-        if (Vector3.Distance(transform.position, lastFramePos) < 0.05f)
+        if(hitWallCounter > 0)
         {
-            transform.Rotate(new Vector3(0, 1, 0), 180);
+            hitWallCounter--;
+        }
+
+        if (Vector3.Distance(transform.position, lastFramePos) < 0.3f && hitWallCounter == 0)
+        {
+            transform.Rotate(new Vector3(0, 1, 0), 180 + Random.Range(-45, 45));
+            hitWallCounter = 50;
+            Debug.Log("HITWALL");
         }
     }
 }

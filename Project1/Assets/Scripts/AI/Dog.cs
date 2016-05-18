@@ -117,10 +117,18 @@ public class Dog : Entity
 						seekingCat = true;
 						seekingBed = false;
 
-						if (Vector3.Distance(transform.position, closestCat.transform.position) < 20.0f) {
-							if (closestCat.name == "Cat") {
-								Application.LoadLevel("gameOver");
+						if (Vector3.Distance(transform.position, closestCat.transform.position) < 20.0f)
+                        {
+							if (closestCat.GetComponent<EnemyCat>() == null)
+                            {
+                                Application.LoadLevel("GameOver");
+                                Debug.Log("Game Over!!");
 							}
+                            else
+                            {
+                                GameObject.Destroy(closestCat);
+                                Debug.Log("Cat Destroyed.");
+                            }
 						}
 					}
 				}                

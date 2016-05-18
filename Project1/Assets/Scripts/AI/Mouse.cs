@@ -4,17 +4,15 @@ using System.Collections;
 public class Mouse : Entity
 {
     private GameObject[] cats;
-	private Vector3 lastFramePosition;
+    public float ignoranceFactor = 0.0f;
 
-	// Genetic Algorithm stuff
-	private Vector3 originPos;
+    // Genetic Algorithm stuff
+    private Vector3 originPos;
 
 	void Start ()
     {
         aiComponent = this.GetComponent<AI>();
         cats = GameObject.FindGameObjectsWithTag("Cat");
-
-		lastFramePosition = this.transform.position;
 
 		// Genetic Algorithm stuff
 		originPos = this.transform.position;
@@ -40,12 +38,12 @@ public class Mouse : Entity
 		}
 
         // If the closest cat is too close flee it
-        if (Vector3.Distance(myPos, closestCat.transform.position) < aiComponent.fleeRadius)
+        if (Vector3.Distance(myPos, closestCat.transform.position) < aiComponent.fleeRadius * (1 - ignoranceFactor))
         {
             aiComponent.Flee(closestCat);
 
 			// Mouse was caught!
-			if (Vector3.Distance(transform.position, closestCat.transform.position) < 10.0f) {
+			if (Vector3.Distance(transform.position, closestCat.transform.position) < 20.0f) {
 				if (closestCat.name == "Cat") {
 					UI.score++;
 					Destroy (this.gameObject);
@@ -69,7 +67,7 @@ public class Mouse : Entity
                 currentCheesePos = c.transform.position;
                 distanceFromCheese = Vector3.Distance(myPos, currentCheesePos);
 
-                if (distanceFromCheese < aiComponent.seekRadius && (closestCheese == null || distanceFromCheese < Vector3.Distance(myPos, closestCheese.transform.position)))
+                if (distanceFromCheese < aiComponent.seekRadius * (1 + ignoranceFactor) && (closestCheese == null || distanceFromCheese < Vector3.Distance(myPos, closestCheese.transform.position)))
                 {
                     closestCheese = c;
                 }
@@ -91,7 +89,6 @@ public class Mouse : Entity
                 }
             }
         }
-		lastFramePosition = myPos;
     }
 
 	// What is the point of this?

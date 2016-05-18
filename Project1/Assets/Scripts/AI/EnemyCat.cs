@@ -5,7 +5,6 @@ public class EnemyCat : Entity
 {
     GameObject dog;
     GameObject target;
-	private Vector3 lastFramePosition;
 
 	// Genetic Algorithm stuff
 	private Vector3 originPos;
@@ -65,7 +64,6 @@ public class EnemyCat : Entity
 				aiComponent.Wander(lastFramePosition);
 			}
         }
-		lastFramePosition = myPos;
     }
 
 	// Genetic Algorithm methods
